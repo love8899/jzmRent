@@ -1,0 +1,118 @@
+﻿@using Jzm.Rent.Common
+@model IEnumerable<Jzm.Rent.WebApp45.Models.Borrow>
+
+@{
+    ViewBag.Title = "ShowAllBorrowDevice";
+    Layout = "~/Views/Shared/_LayoutJzm.cshtml";
+}
+
+<h2>All Rent Record</h2>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr class="table-success">
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowDateOnUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnDateOnUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowDays)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceUID)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsReturned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnQuantity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr class="table-secondary">
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowDateOnUtc)
+            </td>
+            <td>
+                @{
+                    if (item.ReturnDateOnUtc.Value.Year == 1753)
+                    {
+
+                    }
+
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.ReturnDateOnUtc)
+                    }
+
+                }
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowDays)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceUID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsReturned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnQuantity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+<hr />
+@{
+    string temp = PageBarHelper.GetPageBar((int)ViewData["pageIndex"], (int)ViewData["pageCount"]).ToString();
+}
+<div class="page_nav">@Html.Raw(temp)</div>
+
+

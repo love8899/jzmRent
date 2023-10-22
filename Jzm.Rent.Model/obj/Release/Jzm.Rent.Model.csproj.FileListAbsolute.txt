@@ -1,0 +1,6 @@
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Model\bin\Release\Jzm.Rent.Model.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Model\bin\Release\Jzm.Rent.Model.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Model\obj\Release\Jzm.Rent.Model.csproj.CoreCompileInputs.cache
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Model\obj\Release\Jzm.Rent.Model.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Model\obj\Release\Jzm.Rent.Model.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Model\obj\Release\Jzm.Rent.Model.csproj.AssemblyReference.cache

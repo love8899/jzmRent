@@ -1,0 +1,26 @@
+﻿@model System.Data.DataTable
+@using System.Data;
+@{
+    ViewBag.Title = "ShowUsers";
+    Layout = "~/Views/Shared/_LayoutJzm.cshtml";
+}
+
+
+<p> <a href="~/UserList/AddUser">Add User</a></p>
+<table class="table table-hover">
+    <thead>
+    <tr class="table-success"><td>FirstName</td><td>LastName</td><td>Edit</td><td>Delete</td></tr>
+    </thead>
+    <tbody>
+    @foreach (DataRow row in Model.Rows)
+    {
+        <tr class="table-secondary"><td>@row["FirstName"]</td><td>@row["LastName"]</td>
+            <td><a href="~/UserList/EditUser?id=@row["id"]"><button type="button" class="btn btn-dark disabled">Edit</button></a></td>
+            <td><a href="~/UserList/DeleteUser?id=@row["id"]"><button type="button" class="btn btn-danger btn-sm">Delete</button></a></td>
+        
+            </tr>
+    }
+    </tbody>
+</table>
+
+

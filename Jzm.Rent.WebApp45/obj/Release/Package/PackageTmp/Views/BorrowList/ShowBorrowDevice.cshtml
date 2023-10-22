@@ -1,0 +1,92 @@
+﻿@using System.Activities.Expressions
+@using System.Data.SqlTypes
+@model IEnumerable<Jzm.Rent.WebApp45.Models.Borrow>
+
+@{
+    ViewBag.Title = "ShowBorrowDevice";
+    Layout = "~/Views/Shared/_LayoutJzm.cshtml";
+}
+
+
+<div class="d-flex justify-content-between">
+    <div><h2>Borrowed Device</h2></div>
+    
+</div>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr class="table-success">
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowDateOnUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceUID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowQuantity)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserFirstName)
+            </th>
+               
+            <th>
+                @Html.DisplayNameFor(model => model.IsReturned)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+        </thead>
+
+            @foreach (var item in Model)
+            {
+        <tr class="table-secondary">
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowDateOnUtc)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceUID)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(expression: modelItem => item.BorrowQuantity)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserFirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.IsReturned)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditBorrowDevice", new { id = item.id }) |
+                @Html.ActionLink("Return", "ReturnDevice", new { id = item.id }) |
+                @Html.ActionLink("Delete", "DeleteDevice", new { id = item.id }, new { onclick = "return confirm('Are sure wants to delete?');" })
+            </td>
+        </tr>
+            }
+
+    </table>
+</div>

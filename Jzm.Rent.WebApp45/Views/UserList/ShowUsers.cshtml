@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Jzm.Rent.WebApp45.Models.JzmUserInfo>
+@{
+    ViewBag.Title = "ShowUsers";
+    Layout = "~/Views/Shared/_LayoutJzm.cshtml";
+}
+
+
+<p> <a href="~/UserList/AddUser">Add User</a></p>
+<table class="table table-hover">
+    <thead>
+        <tr class="table-success">
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Email</td>
+            <td>MobilePhone</td>
+            <td>IsActive</td>
+            <td>OnboardDate</td>
+            <td>Update</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr class="table-secondary">
+            <td><a href="~/BorrowList/AddBorrowDeviceByUser?id=@item.id">@Html.DisplayFor(modelItem => item.FirstName)</a></td>
+            <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+            <td>@Html.DisplayFor(modelItem => item.MobilePhone)</td>
+            <td>@Html.DisplayFor(modelItem => item.IsActive)</td>
+
+            <td>@Html.DisplayFor(modelItem => item.CreatedOnUtc)</td>
+            <td>@Html.DisplayFor(modelItem => item.UpdateOnUtc)</td>
+
+
+
+            <td><a href="~/UserList/EditUser?id=@item.id"><button type="button" class="btn btn-dark disabled">Edit</button></a></td>
+            <td><a href="~/UserList/DeleteUser?id=@item.id" onclick="return confirm('Are you sure you want to delete this item?');"><button type="button" class="btn btn-danger btn-sm">Delete</button></a></td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+

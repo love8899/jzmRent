@@ -1,0 +1,45 @@
+﻿@model Jzm.Rent.WebApp45.Models.JzmUserInfo
+@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/_LayoutJzm.cshtml";
+}
+
+<h2>EditUser</h2>
+<div>
+    <form action="~/UserList/EditUser" method="post">
+
+        <table>
+            <tr>
+                <input type="hidden" name="Id" value="@Model.id" />
+                <td>FirstName:</td>
+                <td>
+                    <input type="text" name="FirstName" value="@Model.FirstName" />
+                </td>
+            </tr>
+            <tr>
+                <td>LastName:</td>
+                <td>
+                <input type="text" name="LastName" value="@Model.LastName" />
+
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                <input type="text" name="Email" value="@Model.Email" />
+
+            </tr>
+            <tr>
+                <td>Mobile:</td>
+                <td>
+                <input type="text" name="MobilePhone" value="@Model.MobilePhone" />
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Edit User" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>

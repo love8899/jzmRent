@@ -1,0 +1,40 @@
+﻿@model Jzm.Rent.WebApp45.Models.DeviceInfo
+@{
+    ViewBag.Title = "EditDevice";
+    Layout = "~/Views/Shared/_LayoutJzm.cshtml";
+}
+
+<h3>EditDevice</h3>
+<div>
+    <form action="~/DeviceList/EditDevice" method="post">
+
+        <table>
+            <tr>
+                <input type="hidden" name="Id" value="@Model.id" />
+                <td>DeviceUID:</td>
+                <td>
+                    <input type="text" name="DeviceUID" value="@Model.DeviceUID" />
+                </td>
+            </tr>
+            <tr>
+                <td>DeviceName:</td>
+                <td>
+                <input type="text" name="DeviceName" value="@Model.DeviceName" />
+
+            </tr>
+            
+            <tr>
+                <td>Quantity:</td>
+                <td>
+                <input type="text" name="Quantity" value="@Model.Quantity" />
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Edit Device" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>

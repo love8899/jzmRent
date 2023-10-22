@@ -1,0 +1,121 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.easyui.min.js"></script>
+    <link href="~/Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+
+    <link href="~/Content/themes/demo.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            btnClickEvent();
+        });
+
+        function btnClickEvent() {
+            // add tab to left tab
+
+            $(".detaillink123").click(function () {
+                var title = $(this).text();
+                var url = $(this).attr("url");
+                var isExt = $('#tt').tabs('exists', title); //check if tab is already exist
+
+                if (isExt) {
+                    $('#tt').tabs('select', title);
+                    return;
+                }
+
+                $('#tt').tabs('add', {
+                    title:title,
+                    content: showContent(url),
+                    closable: true
+                });
+
+            });
+
+        }
+        // show content on tab
+        function showContent(url) {
+            var strHtml = '<iframe src="'+url+'" width="100%" height="100%" scrolling="yes" frameborder="0"></iframe>';
+            return strHtml;
+        }
+
+    </script>
+    <style>
+         
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north',border:false" style="height:70px;background:#B3DFDA;padding:5px;overflow:hidden;">
+        <img src="~/Content/images/ppp.jpg" />
+    </div>
+
+    <!--left side start-->
+    <div data-options="region:'west',split:true,title:'Admin'" style="width:190px;padding:2px;">
+
+        <div class="easyui-accordion" style="width:auto;height:auto;">
+            <div title="user list" data-options="iconCls:'icon-search',collapsed:false,collapsible:false" style="padding:2px;">
+                <input class="easyui-searchbox" prompt="Enter something here" style="width:auto;">
+            </div>
+
+            <div title="user list" style="padding:5px">
+                <p><a href="javascript:void(0)" class="detaillink123" url="/UserList/ShowUsers">user list</a></p>
+            </div>
+            <div title="Device list" style="padding:5px">
+                <p><a href="javascript:void(0)" class="detaillink123" url="/DeviceList/ShowDevice">Device list</a></p>
+            </div>
+
+            <div title="Rent list" style="padding:5px">
+                <p><a href="javascript:void(0)" class="detaillink123" url="/BorrowList/ShowBorrowDevice">Rent list</a></p>
+                <p><a href="javascript:void(0)" class="detaillink123" url="/BorrowList/ShowAllBorrowDevice">Rent History</a></p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    
+
+    <!--left side end -->
+
+    <!--bottom side start-->
+
+    <div data-options="region:'south',border:false" style="height:35px;background:#A9FACD;padding:10px; text-align:center"> &copy; 2023 Tech Support Eric</div>
+    <!--bottom side end-->
+    
+    <!--middle start-->
+
+    <div data-options="region:'center',title:'Center'">
+        <div class="easyui-tabs" style="width:700px;height:250px" fit="true" id="tt">
+
+            <div title="Rent list" data-options="closable:true" style="padding: 1px;margin: 0">
+                <iframe src="/BorrowList/ShowBorrowDevice" width="100%" height="100%" scrolling="yes" frameborder="0"></iframe>
+            </div>
+            <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding: 1px; margin: 0">
+                <iframe src="/BorrowList/ShowBorrowDevice" width="100%" height="100%" scrolling="yes" frameborder="0"></iframe>
+                This is the help content.
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--middle end-->
+</body>
+</html>

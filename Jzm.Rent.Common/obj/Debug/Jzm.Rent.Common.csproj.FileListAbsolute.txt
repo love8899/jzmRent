@@ -1,0 +1,15 @@
+D:\code\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Debug\Jzm.Rent.Common.dll
+D:\code\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Debug\Jzm.Rent.Common.pdb
+D:\code\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.csproj.CoreCompileInputs.cache
+D:\code\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.dll
+D:\code\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.pdb
+D:\code\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.csprojAssemblyReference.cache
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Debug\Jzm.Rent.Common.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Debug\Jzm.Rent.Common.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.csproj.CoreCompileInputs.cache
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.csproj.AssemblyReference.cache
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Debug\Jzm.Rent.Model.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Debug\Jzm.Rent.Model.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Debug\Jzm.Rent.Common.csproj.CopyComplete

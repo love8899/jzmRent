@@ -1,0 +1,9 @@
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Release\Jzm.Rent.Common.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Release\Jzm.Rent.Common.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Release\Jzm.Rent.Model.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\bin\Release\Jzm.Rent.Model.pdb
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Release\Jzm.Rent.Common.csproj.AssemblyReference.cache
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Release\Jzm.Rent.Common.csproj.CoreCompileInputs.cache
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Release\Jzm.Rent.Common.csproj.CopyComplete
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Release\Jzm.Rent.Common.dll
+D:\jzmcode\jzm\Jzm.Rent\Jzm.Rent.Common\obj\Release\Jzm.Rent.Common.pdb

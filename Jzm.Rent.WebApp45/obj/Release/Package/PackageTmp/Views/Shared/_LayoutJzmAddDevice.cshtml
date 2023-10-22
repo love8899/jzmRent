@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+         
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+    </style>
+    
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript">
+        function checkdeviceuid() {
+
+            var deviceuid = $("#DeviceUID").val();
+
+            jQuery.ajax({
+                type: "POST",
+                url: "DeviceList/CheckDeviceUid",
+                data: '{DeviceUID:"' + deviceuid +'"}',
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (DeviceExists) {
+
+                    var mess = $("#spanmess");
+                    if (result) {
+                        mess.html("deviceUID is available!");
+                        mess.css("color", "green");
+
+                    } else {
+                        mess.html("deviceUID is Not available!");
+                        mess.css("color", "red");
+                    }
+                }
+
+        
+            });
+        }
+
+
+
+    </script>
+    
+    
+
+</head>
+<body>
+    
+    <div class="container body-content">
+        @RenderBody()
+        
+        
+    </div>
+
+    
+</body>
+</html>

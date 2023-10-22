@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    
+    <script type="text/javascript">
+       
+        //getDeviceByUID();
+        //getDevice();
+
+        function getDeviceByUID() {
+
+            // $("#DeviceUID").keyup(function(e) {
+            $.ajax({
+                type: 'POST',
+                url: '/BorrowList/GetDeviceByUID?DeviceUID=' + $("#DeviceUID").val(),
+                dataType: 'JSON',
+                success: function(data) {
+                    $("#DeviceName").val(data.DeviceName);
+                    $("#Quantity").val(data.Quantity);
+                }
+
+            });
+
+            //});
+
+        }
+
+        function getDevice() {
+
+
+            $.ajax({
+                type: 'GET',
+                url: '/BorrowList/GetAllDevice',
+                dataType: 'JSON',
+                success: function (data)
+                {
+                    console.log(data);
+                    for (var i = 0; i < data.length; i++)
+                    {
+
+                        $('#DeviceUID').append($("<option/>",
+                            {
+                                text:data[i].DeviceUID
+                            }));
+                    }
+
+                },
+                error: function(xhr, status, error) {
+                    alert(xhr, responseText);
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div class="container body-content">
+        @RenderBody()
+        
+        
+    </div>
+
+    
+</body>
+</html>
