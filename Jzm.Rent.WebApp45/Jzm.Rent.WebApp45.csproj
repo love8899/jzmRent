@@ -698,7 +698,6 @@
     <Content Include="Views\UserList\ListUser.cshtml" />
     <Content Include="Views\UserList\ShowUsers.cshtml" />
     <Content Include="Views\Shared\_LayoutJzm.cshtml" />
-    <Content Include="Views\UserList\AddUser_12.cshtml" />
     <Content Include="Views\UserList\EditUser.cshtml" />
     <Content Include="Views\DeviceList\ShowDevice.cshtml" />
     <Content Include="Views\DeviceList\AddDevice.cshtml" />
@@ -706,7 +705,6 @@
     <Content Include="Views\Shared\_LayoutJzmwithDelete.cshtml" />
     <Content Include="Views\BorrowList\ShowBorrowDevice.cshtml" />
     <Content Include="Views\BorrowList\EditBorrowDevice.cshtml" />
-    <Content Include="Views\DeviceList\EditDevice - Copy.cshtml" />
     <Content Include="Views\BorrowList\AddBorrowDevice.cshtml" />
     <Content Include="Views\BorrowList\AddBorrowList_demo.cshtml" />
     <Content Include="Views\DeviceList\ShowDevice - Copy.cshtml" />
@@ -721,7 +719,8 @@
     <Content Include="Views\BorrowList\ReturnDevice.cshtml" />
     <Content Include="Views\BorrowList\DetailsDemo.cshtml" />
     <Content Include="Views\BorrowList\ShowAllBorrowDevice.cshtml" />
-    <None Include="Views\UserList\AddUser.cshtml" />
+    <Content Include="Views\UserList\AddUser.cshtml" />
+    <None Include="Views\UserList\AddUser9900.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
